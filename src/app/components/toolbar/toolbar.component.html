@@ -18,14 +18,12 @@
 
   <span class="example-spacer"></span>
   <section>
-    <!-- (click)="login()" *ngIf= "!this.AuthService.people" -->
-     <button mat-button id="login"   >Đăng nhập</button>
+    <button mat-button id="login" (click)="login()" *ngIf= "!this.AuthService.people" >Đăng nhập</button>
     <span></span>
-    <!-- (click)="logout()" *ngIf= "this.AuthService.people"  -->
-    <button mat-button id="logout" >Đăng xuất</button>
+    <button mat-button id="logout"  (click)="logout()" *ngIf= "this.AuthService.people" >Đăng xuất</button>
   </section>
-  <!-- <div *ngIf="this.AuthService.people" id="name">{{this.AuthService.people.displayName}}</div>
-  <img  *ngIf="this.AuthService.people" [src]="this.AuthService.people.photoURL" alt=""> -->
+  <div *ngIf= "this.AuthService.people" id="name">{{this.AuthService.people.displayName}}</div>
+  <img  *ngIf= "this.AuthService.people" [src]="this.AuthService.people.photoURL" alt="">
     <button [routerLink]="['home']"mat-icon-button class="example-icon " aria-label="Example icon-button with settings icon">
       <mat-icon>home</mat-icon>
     </button>

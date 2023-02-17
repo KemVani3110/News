@@ -1,7 +1,7 @@
-<div *ngFor="let new of (new$ | async)">
-  <div>{{new.title}}</div>
-  <div>{{new.description}}</div>
-  <div>{{new.slug}}</div>
-  <div>{{new.path}}</div>
-  <div>{{new.url}}</div>
+<div *ngFor="let item of (new$ | async)">
+  <div>{{item.title}}</div>
+  <div>{{item.description}}</div>
+  <div>{{item.slug}}</div>
+  <div>{{item.path}}</div>
+  <div>{{item.url}}</div>
 </div>
