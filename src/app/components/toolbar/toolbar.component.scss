@@ -43,6 +43,27 @@ section {
   margin: 8px 8px 8px 0;
 }
 
+#logout{
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+#login{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#logout:hover{
+  font-size: 20px;
+  background-color: red;
+}
+
+#login:hover
+{
+  font-size: 20px;
+  background-color: green;
+}
+
 #name{
   display: flex;
 

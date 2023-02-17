@@ -1,7 +1,22 @@
-<div *ngFor="let item of (new$ | async)">
-  <div>{{item.title}}</div>
-  <div>{{item.description}}</div>
-  <div>{{item.slug}}</div>
-  <div>{{item.path}}</div>
-  <div>{{item.url}}</div>
+<div class="NewsContainer">
+  <div id="container">
+    <div id="News" *ngFor="let item of (new$ | async)">
+      <div id="profile" >
+        <img id="ig" [src]="item.user.profile_image">
+        <div id="usn">
+          <div id="nam">{{item.user.name}}</div>
+          <div id="us">@{{item.user.username}}</div>
+        </div>
+      </div>
+      <div id="head2">
+        <div id="tag">#{{item.tag_list}}</div>
+        <div id="date">{{item.readable_publish_date}}</div>
+      </div>
+      <div id="text">{{item.title}}</div>
+      <div id="text">{{item.description}}</div>
+      <div id="hinh">
+          <img id="ig1" [src]="item.cover_image">
+      </div>
+    </div>
+  </div>
 </div>
