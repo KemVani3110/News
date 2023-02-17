@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>list</mat-icon>
+  </button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Giao hàng</button>
+  <button mat-menu-item>Hỗ trợ</button>
+</mat-menu>
+  <span>News</span>
+
+  <form class="example-form">
+   <td><mat-form-field class="example-full-width">
+      <mat-label>Find some news</mat-label>
+      <input matInput placeholder="Ex. Pizza">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field></td>
+  </form>
+
+  <span class="example-spacer"></span>
+  <section>
+    <!-- (click)="login()" *ngIf= "!this.AuthService.people" -->
+     <button mat-button id="login"   >Đăng nhập</button>
+    <span></span>
+    <!-- (click)="logout()" *ngIf= "this.AuthService.people"  -->
+    <button mat-button id="logout" >Đăng xuất</button>
+  </section>
+  <!-- <div *ngIf="this.AuthService.people" id="name">{{this.AuthService.people.displayName}}</div>
+  <img  *ngIf="this.AuthService.people" [src]="this.AuthService.people.photoURL" alt=""> -->
+    <button [routerLink]="['home']"mat-icon-button class="example-icon " aria-label="Example icon-button with settings icon">
+      <mat-icon>home</mat-icon>
+    </button>
+
+</mat-toolbar>

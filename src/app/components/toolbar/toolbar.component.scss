@@ -1,0 +1,57 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.example-form {
+  min-width: 200px;
+  max-width: 500px;
+  width: 150%;
+  height: 90%;
+
+}
+
+.example-full-width {
+  width: 150%;
+}
+
+td {
+  padding-left: 20px;
+
+}
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+#name{
+  display: flex;
+
+}
+img{
+  display: flex;
+  border-radius: 50px;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+
+}
