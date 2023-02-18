@@ -1,3 +1,4 @@
+import { counterReducer } from './../reducers/counter.reducer';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { StoreModule } from '@ngrx/store';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     RouterModule,
     SharedModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    StoreModule.forRoot({count : counterReducer}, {})
 
   ],
   providers: [],
