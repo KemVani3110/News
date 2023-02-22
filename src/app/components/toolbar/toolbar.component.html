@@ -6,12 +6,12 @@
   <button mat-menu-item>Đã thích</button>
   <button mat-menu-item>Hỗ trợ</button>
 </mat-menu>
-  <span>News</span>
+  <span>Báo Đời</span>
 
   <form class="example-form">
    <td><mat-form-field class="example-full-width">
       <mat-label>Find some news</mat-label>
-      <input matInput placeholder="Ex. Pizza">
+      <input matInput placeholder="Ex. Báo đời nè">
       <mat-icon matSuffix>search</mat-icon>
     </mat-form-field></td>
   </form>
@@ -24,8 +24,9 @@
   </section>
   <div *ngIf= "this.AuthService.people" id="name">{{this.AuthService.people.displayName}}</div>
   <img  *ngIf= "this.AuthService.people" [src]="this.AuthService.people.photoURL" alt="">
-    <button [routerLink]="['home']"mat-icon-button class="example-icon " aria-label="Example icon-button with settings icon">
+    <button [routerLink]="['home']"mat-icon-button class="home " aria-label="Example icon-button with settings icon">
       <mat-icon>home</mat-icon>
     </button>
 
 </mat-toolbar>
+<!-- <div id="ji"> </div> -->

@@ -7,7 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
-import { HttpClientModule } from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [],
@@ -19,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatInputModule,
     MatMenuModule,
-    HttpClientModule
+    MatPaginatorModule
+
   ],
 
   exports: [  CommonModule,
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatInputModule,
     MatMenuModule,
-    HttpClientModule
+    MatPaginatorModule
+
 
 
    ]

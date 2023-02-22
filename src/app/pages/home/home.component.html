@@ -1,6 +1,6 @@
 <div class="NewsContainer">
   <div id="container">
-    <div id="News" *ngFor="let item of (new$ | async)">
+    <div id="News" *ngFor="let item of  (new$|async)?.news">
       <div id="profile" >
         <img id="ig" [src]="item.user.profile_image">
         <div id="usn">
@@ -19,4 +19,18 @@
       </div>
     </div>
   </div>
+  <div class="movepage">
+    <button id="btn" mat-icon-button [disabled]="CurrentPage <= 1" (click)="getPreviousPage()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <span id="PageNum">
+        {{CurrentPage}}
+    </span>
+    <button id="btn" mat-icon-button [disabled]="CurrentPage >= 4" (click)="getNextPage()">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
 </div>
+
+
+

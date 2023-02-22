@@ -1,4 +1,5 @@
-import { counterReducer } from './../reducers/counter.reducer';
+import { newsReducer } from '../ngrx/reducers/counter.reducer';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,6 +13,9 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { NewsEffect } from 'src/ngrx/effect/news.effect';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +27,13 @@ import { StoreModule } from '@ngrx/store';
     BrowserAnimationsModule,
     RouterModule,
     SharedModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    StoreModule.forRoot({count : counterReducer}, {})
+    StoreModule.forRoot({news : newsReducer}, {}),
+    EffectsModule.forRoot([
+      NewsEffect
+    ])
 
   ],
   providers: [],

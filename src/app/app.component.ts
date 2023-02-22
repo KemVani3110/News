@@ -1,9 +1,9 @@
 
 import { Observable } from 'rxjs';
-import { CounterState } from './../states/counter.state';
+import { NewsState } from './../ngrx/states/counter.state';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as CounterActions from '../actions//counter.action'
+
 
 @Component({
   selector: 'app-root',
@@ -12,23 +12,26 @@ import * as CounterActions from '../actions//counter.action'
 })
 export class AppComponent {
   title = 'News';
-  count$!: Observable<CounterState>;
-  constructor(private store: Store<{count: CounterState}>){
-    this.count$ = this.store.select('count');
+  // new$!: Observable<NewsState>;
+  new$ = new Observable<NewsState>;
+  constructor(private store: Store<{news: NewsState}>){
+    this.new$ = this.store.select('news');
   }
 
+  // getNews(){
+  //   this.store.dispatch(CounterActions.getNews());
+  // }
 
+  // increase(){
+  //   this.store.dispatch(CounterActions.increase());
+  // }
 
-  increase(){
-    this.store.dispatch(CounterActions.increase());
-  }
+  // decrease(){
+  //   this.store.dispatch(CounterActions.decrease());
+  // }
 
-  decrease(){
-    this.store.dispatch(CounterActions.decrease());
-  }
-
-  reset()
-  {
-    this.store.dispatch(CounterActions.reset());
-  }
+  // reset()
+  // {
+  //   this.store.dispatch(CounterActions.reset());
+  // }
 }
